@@ -10,15 +10,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --white:        #FBF8F2;
-    --white-dim:    #F1ECE0;
-    --ink:          #142433;
-    --ink-soft:     #3C5064;
+    --white:        #FFFFFF;
+    --white-dim:    #EEF2F5;
+    --ink:          #0F3350;
+    --ink-soft:     #4C6A85;
     --aegean:       #1C6EA4;
     --aegean-deep:  #0F3D57;
-    --aegean-line:  rgba(251, 248, 242, 0.28);
+    --aegean-line:  rgba(15, 51, 80, 0.18);
     --bougainvillea:#D6336C;
-    --sun:          #E8A33D;
+    --sun:          #C97F1E;
 
     --display: "Fraunces", Georgia, serif;
     --body: "Work Sans", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -62,10 +62,11 @@
 
   .hero {
     position: relative;
-    background: linear-gradient(180deg, var(--aegean-deep) 0%, var(--aegean) 100%);
-    color: var(--white);
+    background: var(--white);
+    color: var(--ink);
     padding: 30px 0 0;
     overflow: hidden;
+    border-bottom: 1px solid var(--white-dim);
   }
 
   .hero-top {
@@ -74,7 +75,7 @@
     align-items: center;
     font-size: 14px;
     letter-spacing: 0.02em;
-    color: var(--aegean-line);
+    color: var(--ink-soft);
     padding-bottom: 60px;
   }
 
@@ -83,7 +84,7 @@
     font-style: italic;
     font-weight: 500;
     font-size: 16px;
-    color: var(--white);
+    color: var(--ink);
   }
 
   .hero-main {
@@ -127,7 +128,7 @@
   .hero-sub {
     margin: 26px 0 0;
     font-size: clamp(16px, 2vw, 19px);
-    color: var(--white);
+    color: var(--ink);
   }
 
   .hero-sub .divider-dot {
@@ -165,9 +166,9 @@
 
   .btn-outline {
     border-color: var(--aegean-line);
-    color: var(--white);
+    color: var(--ink);
   }
-  .btn-outline:hover { border-color: var(--white); }
+  .btn-outline:hover { border-color: var(--ink); }
 
   .wave {
     display: block;
@@ -302,12 +303,14 @@
   /* ---------- TRAVEL ---------- */
 
   .travel {
-    background: var(--aegean-deep);
-    color: var(--white);
+    background: var(--white);
+    color: var(--ink);
+    border-top: 1px solid var(--white-dim);
+    border-bottom: 1px solid var(--white-dim);
   }
 
-  .travel .section-head h2 { color: var(--white); }
-  .travel .section-head p { color: rgba(251,248,242,0.72); }
+  .travel .section-head h2 { color: var(--ink); }
+  .travel .section-head p { color: var(--ink-soft); }
 
   .travel-grid {
     display: grid;
@@ -325,7 +328,7 @@
   }
 
   .travel-col p, .travel-col li {
-    color: rgba(251,248,242,0.86);
+    color: var(--ink-soft);
     font-size: 15.5px;
   }
 
@@ -337,7 +340,7 @@
 
   .travel-col li {
     padding: 10px 0;
-    border-top: 1px solid rgba(251,248,242,0.14);
+    border-top: 1px solid var(--white-dim);
     display: flex;
     justify-content: space-between;
     gap: 16px;
@@ -346,7 +349,7 @@
   .travel-col li:first-child { border-top: none; }
 
   .travel-col li span:last-child {
-    color: var(--white);
+    color: var(--ink);
     font-weight: 500;
     text-align: right;
   }
@@ -437,12 +440,12 @@
     <div class="wrap">
       <div class="hero-top">
         <span class="hero-mono">Paros, Greece</span>
-        <span class="hero-mono">18—20 June 2027</span>
+        <span class="hero-mono">June 18–20, 2027</span>
       </div>
       <div class="hero-main">
         <p class="hero-kicker">We're getting married, and we want you on the island</p>
         <h1 class="hero-names">Linden <span class="hero-amp">&amp;</span> Nikos</h1>
-        <p class="hero-sub">Saturday, June 19th, 2027<span class="divider-dot">•</span>Paros, Greece</p>
+        <p class="hero-sub">Saturday, June 19, 2027<span class="divider-dot">•</span>Paros, Greece</p>
         <div class="hero-cta-row">
           <a class="btn btn-solid" href="#rsvp">RSVP</a>
           <a class="btn btn-outline" href="#schedule">See the weekend</a>
@@ -450,7 +453,7 @@
       </div>
     </div>
     <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M0,32 C240,80 480,0 720,28 C960,56 1200,8 1440,40 L1440,90 L0,90 Z" fill="#FBF8F2"></path>
+      <path d="M0,32 C240,80 480,0 720,28 C960,56 1200,8 1440,40 L1440,90 L0,90 Z" fill="#FFFFFF"></path>
     </svg>
   </header>
 
