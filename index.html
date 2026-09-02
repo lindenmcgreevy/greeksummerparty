@@ -3,40 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Linden &amp; Nikos — June 19, 2027 — Paros, Greece</title>
+<title>Linden &amp; Nikos — Paros, Greece</title>
 <meta name="description" content="Join Linden and Nikos for a wedding weekend on Paros, Greece — June 18–20, 2027.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+ExtraCondensed:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --white:        #FFFFFF;
-    --white-dim:    #EEF2F5;
-    --ink:          #0F3350;
-    --ink-soft:     #4C6A85;
-    --aegean:       #1C6EA4;
-    --aegean-deep:  #0F3D57;
-    --aegean-line:  rgba(15, 51, 80, 0.18);
-    --bougainvillea:#D6336C;
-    --sun:          #C97F1E;
+    --bg:        #F4ECA4;
+    --ink:       #F76201;
+    --ink-soft:  rgba(247, 98, 1, 0.68);
+    --ink-dim:   rgba(247, 98, 1, 0.22);
 
-    --display: "Fraunces", Georgia, serif;
-    --body: "Work Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    --display: "Noto Serif ExtraCondensed", Georgia, serif;
+    --body: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
   }
 
   * { box-sizing: border-box; }
 
-  html {
-    scroll-behavior: smooth;
-  }
+  html { scroll-behavior: smooth; }
 
   body {
     margin: 0;
-    background: var(--white);
+    background: var(--bg);
     color: var(--ink);
     font-family: var(--body);
     font-size: 17px;
-    line-height: 1.6;
+    line-height: 1.65;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -48,186 +41,133 @@
   a { color: inherit; }
 
   :focus-visible {
-    outline: 2px solid var(--bougainvillea);
+    outline: 2px solid var(--ink);
     outline-offset: 3px;
   }
 
   .wrap {
-    max-width: 1040px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 28px;
   }
 
-  /* ---------- HERO ---------- */
+  /* ---------- SITE HEADER ---------- */
 
-  .hero {
-    position: relative;
-    background: var(--white);
-    color: var(--ink);
-    padding: 30px 0 0;
-    overflow: hidden;
-    border-bottom: 1px solid var(--white-dim);
-  }
-
-  .hero-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
-    letter-spacing: 0.02em;
-    color: var(--ink-soft);
-    padding-bottom: 60px;
-  }
-
-  .hero-mono {
-    font-family: var(--display);
-    font-style: italic;
-    font-weight: 500;
-    font-size: 16px;
-    color: var(--ink);
-  }
-
-  .hero-main {
+  .site-header {
+    padding: 48px 0 0;
     text-align: center;
-    padding: 20px 0 10px;
-    opacity: 0;
-    transform: translateY(14px);
-    animation: rise 900ms ease-out 150ms forwards;
   }
 
-  @keyframes rise {
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .hero-kicker {
+  .site-title {
     font-family: var(--display);
-    font-style: italic;
-    font-weight: 500;
-    font-size: clamp(17px, 2.2vw, 21px);
-    color: var(--sun);
-    margin: 0 0 18px;
-  }
-
-  .hero-names {
-    font-family: var(--display);
-    font-weight: 600;
-    font-size: clamp(56px, 11vw, 132px);
+    font-weight: 700;
+    font-size: clamp(39px, 7.7vw, 92px);
     line-height: 0.98;
     margin: 0;
     letter-spacing: -0.01em;
   }
 
-  .hero-amp {
-    display: inline-block;
+  .site-title button {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .site-title .amp {
     font-style: italic;
     font-weight: 500;
-    color: var(--bougainvillea);
-    padding: 0 0.1em;
+    padding: 0 0.08em;
   }
 
-  .hero-sub {
-    margin: 26px 0 0;
-    font-size: clamp(16px, 2vw, 19px);
-    color: var(--ink);
-  }
-
-  .hero-sub .divider-dot {
-    color: var(--sun);
-    padding: 0 12px;
-  }
-
-  .hero-cta-row {
+  .site-nav {
     display: flex;
     justify-content: center;
-    gap: 16px;
-    margin: 40px 0 0;
+    gap: clamp(18px, 4vw, 40px);
     flex-wrap: wrap;
+    margin: 28px 0 0;
+    padding: 0 0 22px;
+    border-bottom: 1px solid var(--ink-dim);
   }
 
-  .btn {
+  .site-nav button {
     font-family: var(--body);
     font-weight: 600;
-    font-size: 15px;
-    padding: 14px 30px;
-    border-radius: 999px;
+    font-size: 13.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
     text-decoration: none;
-    display: inline-block;
-    border: 1.5px solid transparent;
-    transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+    color: var(--ink-soft);
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 0 0 6px;
+    cursor: pointer;
+    transition: color 150ms ease, border-color 150ms ease;
   }
 
-  .btn:hover { transform: translateY(-2px); }
-
-  .btn-solid {
-    background: var(--bougainvillea);
-    color: var(--white);
-  }
-  .btn-solid:hover { background: #C22960; }
-
-  .btn-outline {
-    border-color: var(--aegean-line);
+  .site-nav button:hover {
     color: var(--ink);
   }
-  .btn-outline:hover { border-color: var(--ink); }
 
-  .wave {
+  .site-nav button[aria-current="page"] {
+    color: var(--ink);
+    border-color: var(--ink);
+  }
+
+  /* ---------- MAIN / SECTIONS ---------- */
+
+  main {
+    padding: 72px 0 96px;
+  }
+
+  .tab-panel {
+    display: none;
+  }
+
+  .tab-panel.active {
     display: block;
-    width: 100%;
-    height: auto;
-    margin-top: 56px;
+    animation: fade 400ms ease-out;
   }
 
-  /* ---------- SECTION SHELLS ---------- */
-
-  section {
-    padding: 96px 0;
+  @keyframes fade {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
-  .section-head {
-    max-width: 560px;
-    margin: 0 0 56px;
+  .lede {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 19px;
   }
 
-  .section-head h2 {
-    font-family: var(--display);
-    font-weight: 600;
-    font-size: clamp(34px, 4.5vw, 48px);
-    margin: 0 0 14px;
-    line-height: 1.08;
-  }
-
-  .section-head p {
-    color: var(--ink-soft);
-    font-size: 17px;
-    max-width: 46ch;
-    margin: 0;
-  }
-
-  /* ---------- SCHEDULE / TIMELINE ---------- */
-
-  .schedule {
-    background: var(--white);
-  }
+  /* ---------- SCHEDULE ---------- */
 
   .timeline {
+    max-width: 640px;
+    margin: 0 auto;
     position: relative;
   }
 
   .timeline::before {
     content: "";
     position: absolute;
-    left: 84px;
-    top: 10px;
-    bottom: 10px;
+    left: 92px;
+    top: 8px;
+    bottom: 8px;
     width: 1.5px;
-    background: linear-gradient(180deg, var(--aegean) 0%, var(--bougainvillea) 100%);
-    opacity: 0.35;
+    background: var(--ink);
+    opacity: 0.28;
   }
 
   .day-block {
     position: relative;
-    padding-left: 128px;
-    margin-bottom: 64px;
+    padding-left: 132px;
+    margin-bottom: 56px;
   }
 
   .day-block:last-child { margin-bottom: 0; }
@@ -235,335 +175,296 @@
   .day-label {
     position: absolute;
     left: 0;
-    top: -2px;
-    width: 68px;
+    top: 3px;
+    width: 76px;
     text-align: right;
+  }
+
+  .day-label .day-name {
+    display: block;
     font-family: var(--display);
-    font-weight: 600;
-    font-size: 15px;
-    color: var(--aegean-deep);
+    font-weight: 700;
+    font-size: 17px;
   }
 
   .day-label .day-date {
     display: block;
-    font-family: var(--body);
-    font-weight: 500;
-    font-size: 13px;
+    font-size: 12px;
     color: var(--ink-soft);
-    margin-top: 3px;
+    margin-top: 2px;
   }
 
   .day-dot {
     position: absolute;
-    left: 80px;
-    top: 3px;
+    left: 88px;
+    top: 6px;
     width: 9px;
     height: 9px;
     border-radius: 50%;
-    background: var(--bougainvillea);
-    box-shadow: 0 0 0 4px var(--white);
+    background: var(--ink);
+    box-shadow: 0 0 0 4px var(--bg);
   }
 
-  .day-title {
+  .day-event h2 {
     font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(26px, 3.4vw, 34px);
+    margin: 0 0 10px;
+  }
+
+  .day-event p {
+    margin: 0 0 8px;
+    color: var(--ink);
+    font-size: 16px;
+  }
+
+  .day-event .day-location {
+    display: inline-block;
+    margin-top: 4px;
     font-weight: 600;
-    font-size: clamp(24px, 3vw, 30px);
-    margin: 0 0 18px;
-  }
-
-  .event {
-    display: flex;
-    gap: 20px;
-    padding: 16px 0;
-    border-top: 1px solid var(--white-dim);
-  }
-
-  .event:first-of-type { border-top: none; padding-top: 0; }
-
-  .event-time {
-    flex: 0 0 92px;
-    font-weight: 600;
-    color: var(--aegean);
-    font-size: 15px;
-    padding-top: 1px;
-  }
-
-  .event-body h3 {
-    margin: 0 0 4px;
-    font-size: 17px;
-    font-weight: 600;
-  }
-
-  .event-body p {
-    margin: 0;
+    font-size: 13.5px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
     color: var(--ink-soft);
-    font-size: 15px;
   }
 
   /* ---------- TRAVEL ---------- */
 
-  .travel {
-    background: var(--white);
-    color: var(--ink);
-    border-top: 1px solid var(--white-dim);
-    border-bottom: 1px solid var(--white-dim);
+  .travel-section {
+    max-width: 640px;
+    margin: 0 auto 72px;
   }
 
-  .travel .section-head h2 { color: var(--ink); }
-  .travel .section-head p { color: var(--ink-soft); }
+  .travel-section:last-child { margin-bottom: 0; }
 
-  .travel-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 56px;
-  }
-
-  .travel-col h3 {
+  .travel-section > h2 {
     font-family: var(--display);
-    font-style: italic;
-    font-weight: 500;
-    font-size: 22px;
+    font-weight: 700;
+    font-size: clamp(30px, 4vw, 40px);
     margin: 0 0 16px;
-    color: var(--sun);
   }
 
-  .travel-col p, .travel-col li {
-    color: var(--ink-soft);
-    font-size: 15.5px;
+  .travel-section > p.intro {
+    font-size: 17px;
+    margin: 0 0 40px;
   }
 
-  .travel-col ul {
-    padding-left: 0;
-    list-style: none;
+  .travel-item {
+    padding: 28px 0;
+    border-top: 1px solid var(--ink-dim);
+  }
+
+  .travel-item:first-of-type { border-top: none; }
+
+  .travel-item h3 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0 0 10px;
+  }
+
+  .travel-item p {
     margin: 0;
+    font-size: 16px;
   }
 
-  .travel-col li {
-    padding: 10px 0;
-    border-top: 1px solid var(--white-dim);
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
+  /* ---------- FAQ ---------- */
+
+  .faq-list {
+    max-width: 640px;
+    margin: 0 auto;
   }
 
-  .travel-col li:first-child { border-top: none; }
-
-  .travel-col li span:last-child {
-    color: var(--ink);
-    font-weight: 500;
-    text-align: right;
+  .faq-item {
+    padding: 30px 0;
+    border-top: 1px solid var(--ink-dim);
   }
 
-  /* ---------- RSVP ---------- */
+  .faq-item:first-child { border-top: none; padding-top: 0; }
 
-  .rsvp {
-    background: var(--white);
-    text-align: center;
-  }
-
-  .rsvp-card {
-    background: linear-gradient(135deg, var(--bougainvillea) 0%, #B02358 100%);
-    color: var(--white);
-    border-radius: 28px;
-    padding: 72px 40px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .rsvp-card h2 {
+  .faq-item h2 {
     font-family: var(--display);
-    font-weight: 600;
-    font-size: clamp(32px, 5vw, 46px);
-    margin: 0 0 16px;
-    position: relative;
+    font-weight: 700;
+    font-size: clamp(24px, 3vw, 30px);
+    margin: 0 0 12px;
   }
 
-  .rsvp-card p {
-    max-width: 46ch;
-    margin: 0 auto 34px;
-    color: rgba(255,255,255,0.9);
+  .faq-item p {
+    margin: 0;
     font-size: 16.5px;
-    position: relative;
-  }
-
-  .rsvp-card .btn-solid {
-    background: var(--white);
-    color: var(--bougainvillea);
-    position: relative;
-  }
-  .rsvp-card .btn-solid:hover { background: var(--white-dim); }
-
-  .rsvp-note {
-    margin-top: 20px;
-    font-size: 13.5px;
-    color: var(--ink-soft);
   }
 
   /* ---------- FOOTER ---------- */
 
   footer {
-    padding: 48px 0 56px;
+    padding: 40px 0 56px;
     text-align: center;
+    font-size: 13.5px;
     color: var(--ink-soft);
-    font-size: 14px;
-  }
-
-  footer .foot-mark {
-    font-family: var(--display);
-    font-style: italic;
-    font-size: 18px;
-    color: var(--aegean-deep);
-    margin-bottom: 8px;
-    display: block;
   }
 
   /* ---------- RESPONSIVE ---------- */
 
-  @media (max-width: 720px) {
-    section { padding: 68px 0; }
-    .hero-top { padding-bottom: 40px; font-size: 12px; }
-    .travel-grid { grid-template-columns: 1fr; gap: 44px; }
+  @media (max-width: 640px) {
+    main { padding: 56px 0 72px; }
     .timeline::before { left: 8px; }
     .day-block { padding-left: 40px; }
-    .day-label { position: static; text-align: left; width: auto; margin-bottom: 10px; }
-    .day-label .day-date { display: inline; margin-left: 6px; }
-    .day-dot { left: 4px; top: 6px; }
-    .event { flex-direction: column; gap: 4px; }
-    .event-time { flex: none; }
-    .rsvp-card { padding: 52px 24px; border-radius: 20px; }
+    .day-label { position: static; text-align: left; width: auto; margin-bottom: 8px; display: flex; gap: 8px; align-items: baseline; }
+    .day-label .day-date { margin-top: 0; }
+    .day-dot { left: 4px; top: 8px; }
   }
 </style>
 </head>
 <body>
 
-  <header class="hero">
+  <header class="site-header">
     <div class="wrap">
-      <div class="hero-top">
-        <span class="hero-mono">Paros, Greece</span>
-        <span class="hero-mono">June 18–20, 2027</span>
-      </div>
-      <div class="hero-main">
-        <p class="hero-kicker">We're getting married, and we want you on the island</p>
-        <h1 class="hero-names">Linden <span class="hero-amp">&amp;</span> Nikos</h1>
-        <p class="hero-sub">Saturday, June 19, 2027<span class="divider-dot">•</span>Paros, Greece</p>
-        <div class="hero-cta-row">
-          <a class="btn btn-solid" href="#rsvp">RSVP</a>
-          <a class="btn btn-outline" href="#schedule">See the weekend</a>
-        </div>
-      </div>
+      <h1 class="site-title"><button type="button" data-tab-link="home">Linden <span class="amp">&amp;</span> Nikos</button></h1>
+      <nav class="site-nav" aria-label="Primary">
+        <button type="button" data-tab-link="home" aria-current="page">Home</button>
+        <button type="button" data-tab-link="schedule">Schedule</button>
+        <button type="button" data-tab-link="travel">Travel &amp; Accommodation</button>
+        <button type="button" data-tab-link="faq">FAQ</button>
+      </nav>
     </div>
-    <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M0,32 C240,80 480,0 720,28 C960,56 1200,8 1440,40 L1440,90 L0,90 Z" fill="#FFFFFF"></path>
-    </svg>
   </header>
 
-  <section class="schedule" id="schedule">
+  <main>
     <div class="wrap">
-      <div class="section-head">
-        <h2>The weekend</h2>
-        <p>Three days on the Aegean — a welcome by the water, the wedding itself, and a slow goodbye before everyone scatters back home.</p>
-      </div>
 
-      <div class="timeline">
+      <!-- HOME -->
+      <section class="tab-panel active" id="home" data-tab-panel="home">
+        <p class="lede">Join us for a weekend in the Cyclades! More of a party than a traditional wedding, we can't wait to celebrate with you and share the island experience with our favorite people.</p>
+      </section>
 
-        <div class="day-block">
-          <div class="day-label">FRI<span class="day-date">Jun 18</span></div>
-          <div class="day-dot"></div>
-          <h3 class="day-title">Welcome to the island</h3>
+      <!-- SCHEDULE -->
+      <section class="tab-panel" id="schedule" data-tab-panel="schedule">
+        <div class="timeline">
 
-          <div class="event">
-            <div class="event-time">7:00 PM</div>
-            <div class="event-body">
-              <h3>Welcome gathering, Naoussa harbor</h3>
-              <p>Ouzo, small plates, and a first look at everyone who made the trip. Casual — come straight from the ferry if you need to.</p>
+          <div class="day-block">
+            <div class="day-label">
+              <span class="day-name">Friday</span>
+              <span class="day-date">June 18, 2027</span>
             </div>
+            <div class="day-dot"></div>
+            <div class="day-event">
+              <h2>Welcome dinner</h2>
+              <p>Sunset drinks and dinner to kick off the celebrations.</p>
+            </div>
+          </div>
+
+          <div class="day-block">
+            <div class="day-label">
+              <span class="day-name">Saturday</span>
+              <span class="day-date">June 19, 2027</span>
+            </div>
+            <div class="day-dot"></div>
+            <div class="day-event">
+              <h2>"Wedding" party</h2>
+              <p>Cocktails, a Greek feast, and dancing late into the night.</p>
+              <span class="day-location">Villa Mira Paros</span>
+            </div>
+          </div>
+
+          <div class="day-block">
+            <div class="day-label">
+              <span class="day-name">Sunday</span>
+              <span class="day-date">June 20, 2027</span>
+            </div>
+            <div class="day-dot"></div>
+            <div class="day-event">
+              <h2>Beach day</h2>
+              <p>Coffee and comfort food by the sea to soak up every last bit of our weekend together.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- TRAVEL & ACCOMMODATION -->
+      <section class="tab-panel" id="travel" data-tab-panel="travel">
+
+        <div class="travel-section">
+          <h2>Travel</h2>
+          <p class="intro">To reach Paros, you can either take a quick domestic flight from Athens or enjoy the scenic ferry ride. Both are great options, but we recommend booking in advance as they tend to fill up quickly during the summer months.</p>
+
+          <div class="travel-item">
+            <h3>Fly ATH – PAS</h3>
+            <p>For the fastest trip, you can fly into Athens International Airport "Eleftherios Venizelos" (ATH) and take a quick 40-minute connecting flight to Paros Airport (PAS). Once you land, it's a 15-minute drive north to the town of Parikia or 30 minutes to Naoussa. Taxis are readily available at the airport entrance, or you can pick up a rental car if you're planning to explore the island on your own.</p>
+          </div>
+
+          <div class="travel-item">
+            <h3>Ferry from Piraeus to Paros</h3>
+            <p>To catch the ferry, you'll head to Piraeus Harbor (Gate E9). We recommend using Ferryscanner to book your tickets online in advance. The high-speed ferry takes about 2h 45m, and will drop you off directly in the heart of Parikia. Make sure to arrive at the port 30–45 mins before your departure time to account for traffic and boarding.</p>
           </div>
         </div>
 
-        <div class="day-block">
-          <div class="day-label">SAT<span class="day-date">Jun 19</span></div>
-          <div class="day-dot"></div>
-          <h3 class="day-title">The wedding</h3>
-
-          <div class="event">
-            <div class="event-time">6:00 PM</div>
-            <div class="event-body">
-              <h3>Ceremony, Agia Ekaterini chapel</h3>
-              <p>A short, whitewashed chapel ceremony overlooking the sea. Seating from 5:30.</p>
-            </div>
-          </div>
-          <div class="event">
-            <div class="event-time">7:30 PM</div>
-            <div class="event-body">
-              <h3>Reception &amp; dinner, seaside courtyard</h3>
-              <p>Long tables, local wine, and food family-style. Dancing starts whenever the music does.</p>
-            </div>
+        <div class="travel-section">
+          <h2>Accommodation</h2>
+          <div class="travel-item" style="border-top: none;">
+            <p>We recommend staying on the west side of the island, between Pounta and Pasaporos.</p>
           </div>
         </div>
 
-        <div class="day-block">
-          <div class="day-label">SUN<span class="day-date">Jun 20</span></div>
-          <div class="day-dot"></div>
-          <h3 class="day-title">Farewell brunch</h3>
+      </section>
 
-          <div class="event">
-            <div class="event-time">11:00 AM</div>
-            <div class="event-body">
-              <h3>Brunch at Parikia</h3>
-              <p>No program, no toasts — just coffee, pastries, and a proper goodbye before flights and ferries out.</p>
-            </div>
+      <!-- FAQ -->
+      <section class="tab-panel" id="faq" data-tab-panel="faq">
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <h2>Are children invited?</h2>
+            <p>We love your children, but the events over the entire weekend will be adults only, with the exception of direct family. We will be reaching out to you directly to help coordinate childcare so you can celebrate with us stress-free.</p>
           </div>
-        </div>
 
-      </div>
+        </div>
+      </section>
+
     </div>
-  </section>
-
-  <section class="travel">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Getting there &amp; staying</h2>
-        <p>Paros sits in the Cyclades, reachable by ferry from Athens or a short flight. Here's what you need to plan around.</p>
-      </div>
-
-      <div class="travel-grid">
-        <div class="travel-col">
-          <h3>Getting there</h3>
-          <ul>
-            <li><span>Fly into</span><span>Athens (ATH)</span></li>
-            <li><span>Then</span><span>Ferry from Piraeus, ~4 hrs</span></li>
-            <li><span>Or</span><span>Direct flight to Paros (PAS)</span></li>
-            <li><span>Book ferries</span><span>by early spring — they sell out</span></li>
-          </ul>
-        </div>
-        <div class="travel-col">
-          <h3>Where to stay</h3>
-          <ul>
-            <li><span>Closest to it all</span><span>Naoussa</span></li>
-            <li><span>Quieter, 15 min away</span><span>Parikia</span></li>
-            <li><span>We've held a block at</span><span>[hotel name — add link]</span></li>
-            <li><span>Group rate code</span><span>LINDENNIKOS27</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="rsvp" id="rsvp">
-    <div class="wrap">
-      <div class="rsvp-card">
-        <h2>Will you be there?</h2>
-        <p>Let us know by March 1st, 2027, so we can lock in the harbor tables and the ferry block.</p>
-        <a class="btn btn-solid" href="#" target="_blank" rel="noopener">RSVP now</a>
-      </div>
-      <p class="rsvp-note">Replace this button's link with your RSVP form URL before publishing.</p>
-    </div>
-  </section>
+  </main>
 
   <footer>
-    <span class="foot-mark">L &amp; N</span>
     Paros, Greece — June 19, 2027
   </footer>
+
+  <script>
+    (function () {
+      var links = document.querySelectorAll('[data-tab-link]');
+      var panels = document.querySelectorAll('[data-tab-panel]');
+
+      function showTab(name, updateHash) {
+        panels.forEach(function (p) {
+          p.classList.toggle('active', p.getAttribute('data-tab-panel') === name);
+        });
+        links.forEach(function (l) {
+          var isNav = l.closest('.site-nav') !== null;
+          if (isNav) {
+            if (l.getAttribute('data-tab-link') === name) {
+              l.setAttribute('aria-current', 'page');
+            } else {
+              l.removeAttribute('aria-current');
+            }
+          }
+        });
+        if (updateHash) {
+          history.replaceState(null, '', '#' + name);
+        }
+        window.scrollTo({ top: 0, behavior: 'auto' });
+      }
+
+      links.forEach(function (link) {
+        link.addEventListener('click', function () {
+          showTab(link.getAttribute('data-tab-link'), true);
+        });
+      });
+
+      var validTabs = ['home', 'schedule', 'travel', 'faq'];
+      var initial = window.location.hash.replace('#', '');
+      if (validTabs.indexOf(initial) !== -1) {
+        showTab(initial, false);
+      }
+    })();
+  </script>
 
 </body>
 </html>
