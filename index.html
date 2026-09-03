@@ -83,6 +83,13 @@
     padding: 0 0.08em;
   }
 
+  .site-subtitle {
+    font-family: var(--body);
+    font-weight: 500;
+    font-size: 22px;
+    margin: 14px 0 0;
+  }
+
   .site-nav {
     display: flex;
     justify-content: center;
@@ -279,6 +286,16 @@
     font-size: 16px;
   }
 
+  .hotel-list {
+    margin: 16px 0 0;
+    padding: 0 0 0 20px;
+    font-size: 16px;
+  }
+
+  .hotel-list li {
+    margin-bottom: 6px;
+  }
+
   /* ---------- FAQ ---------- */
 
   .faq-list {
@@ -332,6 +349,7 @@
   <header class="site-header">
     <div class="wrap">
       <h1 class="site-title"><button type="button" data-tab-link="home">Linden <span class="amp">&amp;</span> Nikos</button></h1>
+      <p class="site-subtitle">Paros, Greece — June 19, 2027</p>
       <nav class="site-nav" aria-label="Primary">
         <button type="button" data-tab-link="home" aria-current="page">Home</button>
         <button type="button" data-tab-link="schedule">Schedule</button>
@@ -361,8 +379,8 @@
             </div>
             <div class="day-dot"></div>
             <div class="day-event">
-              <h2>Welcome dinner</h2>
-              <p>Sunset drinks and dinner to kick off the celebrations.</p>
+              <h2>WELCOME</h2>
+              <p>Sunset drinks and casual dinner to kick off the festivities.</p>
             </div>
           </div>
 
@@ -373,8 +391,8 @@
             </div>
             <div class="day-dot"></div>
             <div class="day-event">
-              <h2>"Wedding" party</h2>
-              <p>Cocktails, a Greek feast, and dancing late into the night.</p>
+              <h2>PARTY</h2>
+              <p>Our non-traditional celebration with a Greek feast and dancing late into the night.</p>
               <span class="day-location">Villa Mira Paros</span>
             </div>
           </div>
@@ -386,8 +404,8 @@
             </div>
             <div class="day-dot"></div>
             <div class="day-event">
-              <h2>Beach day</h2>
-              <p>Coffee and comfort food by the sea to soak up every last bit of our weekend together.</p>
+              <h2>BEACH</h2>
+              <p>Comfort food and coffee by the sea.</p>
             </div>
           </div>
 
@@ -402,12 +420,12 @@
           <p class="intro">To reach Paros, you can either take a quick domestic flight from Athens or enjoy the scenic ferry ride. Both are great options, but we recommend booking in advance as they tend to fill up quickly during the summer months.</p>
 
           <div class="travel-item">
-            <h3>Fly ATH – PAS</h3>
-            <p>For the fastest trip, you can fly into Athens International Airport "Eleftherios Venizelos" (ATH) and take a quick 40-minute connecting flight to Paros Airport (PAS). Once you land, it's a 15-minute drive north to the town of Parikia or 30 minutes to Naoussa. Taxis are readily available at the airport entrance, or you can pick up a rental car if you're planning to explore the island on your own.</p>
+            <h3>✈️ Fly ATH – PAS</h3>
+            <p>For the fastest trip, you can fly into Athens International Airport "Eleftherios Venizelos" (ATH) and take a quick 40-minute flight to Paros Airport (PAS). Once you land, it's a 15-minute drive to the area between Pounta and Pasaparos or 30 minutes to Naousa. Taxis are readily available at the airport entrance, or you can pick up a rental car if you're planning to explore the island on your own.</p>
           </div>
 
           <div class="travel-item">
-            <h3>Ferry from Piraeus to Paros</h3>
+            <h3>⛴️ Ferry from Piraeus to Paros</h3>
             <p>To catch the ferry, you'll head to Piraeus Harbor (Gate E9). We recommend using Ferryscanner to book your tickets online in advance. The high-speed ferry takes about 2h 45m, and will drop you off directly in the heart of Parikia. Make sure to arrive at the port 30–45 mins before your departure time to account for traffic and boarding.</p>
           </div>
         </div>
@@ -415,7 +433,12 @@
         <div class="travel-section">
           <h2>Accommodation</h2>
           <div class="travel-item" style="border-top: none;">
-            <p>We recommend staying on the west side of the island, between Pounta and Pasaporos.</p>
+            <p>We recommend staying on the west side of the island, between Pounta and Pasaporos. There are many Airbnbs in the area in addition to the following select hotels.</p>
+            <ul class="hotel-list">
+              <li>Kouros Blanc Paros</li>
+              <li>SeeSoo Paros</li>
+              <li>Mythic Paros</li>
+            </ul>
           </div>
         </div>
 
@@ -437,8 +460,6 @@
   </main>
 
   <footer>
-    Paros, Greece — June 19, 2027
-  </footer>
 
   <script>
     (function () {
