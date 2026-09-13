@@ -69,10 +69,10 @@
 
   .site-title button {
     background: none;
+    color: var(--ink);
     border: none;
     padding: 0;
     font: inherit;
-    color: inherit;
     cursor: pointer;
     text-decoration: none;
   }
@@ -87,7 +87,7 @@
     font-family: var(--body);
     font-weight: 500;
     font-size: 22px;
-    margin: 14px 0 0;
+    margin: 0;
   }
 
   .site-nav {
@@ -349,7 +349,6 @@
   <header class="site-header">
     <div class="wrap">
       <h1 class="site-title"><button type="button" data-tab-link="home">Linden <span class="amp">&amp;</span> Nikos</button></h1>
-      <p class="site-subtitle">Paros, Greece — June 19, 2027</p>
       <nav class="site-nav" aria-label="Primary">
         <button type="button" data-tab-link="home" aria-current="page">Home</button>
         <button type="button" data-tab-link="schedule">Schedule</button>
@@ -460,7 +459,8 @@
   </main>
 
   <footer>
-
+    <p class="site-subtitle">Paros, Greece — June 19, 2027</p>
+  </footer>
   <script>
     (function () {
       var links = document.querySelectorAll('[data-tab-link]');
