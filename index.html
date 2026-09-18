@@ -186,7 +186,8 @@
   .day-block {
     position: relative;
     padding-left: 132px;
-    margin-bottom: 56px;
+    margin-bottom: 24px;
+    min-height: 175px;
   }
 
   .day-block:last-child { margin-bottom: 0; }
@@ -203,12 +204,12 @@
     display: block;
     font-family: var(--display);
     font-weight: 700;
-    font-size: 17px;
+    font-size: 19px;
   }
 
   .day-label .day-date {
     display: block;
-    font-size: 12px;
+    font-size: 15px;
     color: var(--ink-soft);
     margin-top: 2px;
   }
@@ -228,23 +229,36 @@
     font-family: var(--display);
     font-weight: 700;
     font-size: clamp(26px, 3.4vw, 34px);
-    margin: 0 0 10px;
+    margin: 0 0 14px;
   }
 
-  .day-event p {
-    margin: 0 0 8px;
+  .day-box {
+    padding: 24px 28px;
+    border-radius: 10px;
+    background: var(--ink-a20);
+  }
+
+  .day-box p {
+    margin: 0 0 10px;
     color: var(--ink);
     font-size: 16px;
   }
 
-  .day-event .day-location {
-    display: inline-block;
-    margin-top: 4px;
+  .day-box p:last-child {
+    margin-bottom: 0;
+  }
+
+  .day-meta {
     font-weight: 600;
     font-size: 13.5px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--ink-soft);
+  }
+
+  .day-meta a {
+    color: inherit;
+    text-decoration: underline;
   }
 
   /* ---------- TRAVEL ---------- */
@@ -265,7 +279,11 @@
 
   .travel-section > p.intro {
     font-size: 17px;
-    margin: 0 0 40px;
+    margin: 0 0 16px;
+  }
+
+  .travel-section > p.intro:last-of-type {
+    margin-bottom: 24px;
   }
 
   .travel-item {
@@ -423,37 +441,43 @@
           <div class="day-block">
             <div class="day-label">
               <span class="day-name">Friday</span>
-              <span class="day-date">June 18, 2027</span>
+              <span class="day-date">June 18</span>
             </div>
             <div class="day-dot"></div>
             <div class="day-event">
               <h2>WELCOME</h2>
-              <p>Sunset drinks and casual dinner to kick off the festivities.</p>
+              <div class="day-box">
+                <p>Sunset drinks and casual dinner to kick off the festivities.</p>
+              </div>
             </div>
           </div>
 
           <div class="day-block">
             <div class="day-label">
               <span class="day-name">Saturday</span>
-              <span class="day-date">June 19, 2027</span>
+              <span class="day-date">June 19</span>
             </div>
             <div class="day-dot"></div>
             <div class="day-event">
               <h2>PARTY</h2>
-              <p>Our non-traditional celebration with a Greek feast and dancing late into the night.</p>
-              <span class="day-location">Villa Mira Paros</span>
+              <div class="day-box">
+                <p>Our non-traditional celebration! A Greek feast and dancing late into the night.</p>
+                <p class="day-meta"><a href="https://www.google.com/maps/place/VILLA+MIRA+PAROS/@37.061598,25.118108,15z/data=!4m21!1m10!3m9!1s0x149871b80de12e9f:0xa849e157a65650a4!2sVILLA+MIRA+PAROS!5m2!4m1!1i2!8m2!3d37.0616031!4d25.1268525!16s%2Fg%2F11hdqycq2q!3m9!1s0x149871b80de12e9f:0xa849e157a65650a4!5m2!4m1!1i2!8m2!3d37.0616031!4d25.1268525!15sChFtaXJhIHZpbGxhcyBwYXJvc5IBB2xvZGdpbmc!16s%2Fg%2F11hdqycq2q?entry=ttu&amp;g_ep=EgoyMDI2MDkxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Villa Mira Paros</a></p>
+              </div>
             </div>
           </div>
 
           <div class="day-block">
             <div class="day-label">
               <span class="day-name">Sunday</span>
-              <span class="day-date">June 20, 2027</span>
+              <span class="day-date">June 20</span>
             </div>
             <div class="day-dot"></div>
             <div class="day-event">
               <h2>BEACH</h2>
-              <p>Comfort food and coffee by the sea.</p>
+              <div class="day-box">
+                <p>It's not time to go home yet. Regain your strength with coffee and comfort food by the sea.</p>
+              </div>
             </div>
           </div>
 
@@ -480,7 +504,9 @@
 
         <div class="travel-section">
           <h2>Accommodation</h2>
-          <p class="intro">We suggest staying on the west side of the island to be close to our venues. There are many Airbnbs in the area within 15 mins driving of Villa Mira, in addition to these recommended hotels.</p>
+          <p class="intro">We have two suggestions for where to stay on the island.</p>
+          <p class="intro">The west side is closest to our venues and accommodations tend to be quieter with incredible sunset views. There are many Airbnbs between Pounta and Pasaporos, in addition to the recommended hotels below.</p>
+          <p class="intro">Naousa is 30 minutes north of our venues, but is the place to be if you want to experience classic Cycladic village charm and walkability to shops and restaurants.</p>
           <div class="hotel-grid">
             <a class="hotel-card" href="https://www.kourosblanc.com/" target="_blank" rel="noopener">
               <div class="hotel-square">
@@ -518,6 +544,11 @@
           <div class="faq-item">
             <h2>Are children invited?</h2>
             <p>We love your children, but the events over the entire weekend will be adults only, with the exception of direct family. We will be reaching out to you directly to help coordinate childcare so you can celebrate with us stress-free.</p>
+          </div>
+
+          <div class="faq-item">
+            <h2>Will venue transportation be provided?</h2>
+            <p>Yes, pickups and drop offs will be arranged based on centralized locations.</p>
           </div>
 
         </div>
