@@ -186,85 +186,43 @@
 
   /* ---------- SCHEDULE ---------- */
 
-  .timeline {
+  .schedule-list {
     max-width: 640px;
     margin: 0 auto;
-    position: relative;
   }
 
-  .timeline::before {
-    content: "";
-    position: absolute;
-    left: 130px;
-    top: 8px;
-    bottom: 8px;
-    width: 1.5px;
-    background: var(--ink);
-    opacity: 0.28;
-  }
-
-  .day-block {
-    position: relative;
-    padding-left: 170px;
+  .day-card {
+    background: var(--ink-a20);
+    border-radius: 16px;
+    padding: 28px 32px;
     margin-bottom: 24px;
-    min-height: 175px;
   }
 
-  .day-block:last-child { margin-bottom: 0; }
+  .day-card:last-child { margin-bottom: 0; }
 
-  .day-label {
-    position: absolute;
-    left: 0;
-    top: 3px;
-    width: 112px;
-    text-align: right;
-  }
-
-  .day-label .day-name {
-    display: block;
-    font-family: var(--display);
-    font-weight: 700;
-    font-size: 19px;
-  }
-
-  .day-label .day-date {
-    display: block;
-    font-size: 15px;
-    color: var(--ink-soft);
-    margin-top: 2px;
-  }
-
-  .day-dot {
-    position: absolute;
-    left: 126px;
-    top: 6px;
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background: var(--ink);
-    box-shadow: 0 0 0 4px var(--bg);
-  }
-
-  .day-event h2 {
+  .day-card h2 {
     font-family: var(--display);
     font-weight: 700;
     font-size: clamp(26px, 3.4vw, 34px);
-    margin: 0 0 14px;
+    margin: 0 0 2px;
   }
 
-  .day-box {
-    padding: 24px 28px;
-    border-radius: 10px;
-    background: var(--ink-a20);
+  .day-card .day-date {
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 16px;
   }
 
-  .day-box p {
+  .day-card p {
     margin: 0 0 10px;
     color: var(--ink);
     font-size: 16px;
   }
 
-  .day-box p:last-child {
+  .day-card p:last-child {
     margin-bottom: 0;
   }
 
@@ -279,6 +237,15 @@
   .day-meta a {
     color: inherit;
     text-decoration: underline;
+  }
+
+  .day-address {
+    margin-top: 4px;
+    font-weight: 400;
+    font-size: 13.5px;
+    letter-spacing: normal;
+    text-transform: none;
+    color: var(--ink-soft);
   }
 
   /* ---------- TRAVEL ---------- */
@@ -435,11 +402,7 @@
   @media (max-width: 640px) {
     main { padding: 56px 0 72px; }
     #home { margin-top: -56px; }
-    .timeline::before { left: 8px; }
-    .day-block { padding-left: 40px; }
-    .day-label { position: static; text-align: left; width: auto; margin-bottom: 8px; display: flex; gap: 8px; align-items: baseline; }
-    .day-label .day-date { margin-top: 0; }
-    .day-dot { left: 4px; top: 8px; }
+    .day-card { padding: 22px 20px; }
     .hotel-grid { flex-direction: column; gap: 16px; }
     .hotel-card { padding: 0; }
     .hotel-name { font-size: 15px; margin-top: 10px; }
@@ -473,49 +436,26 @@
 
       <!-- SCHEDULE -->
       <section class="tab-panel" id="schedule" data-tab-panel="schedule">
-        <div class="timeline">
+        <div class="schedule-list">
 
-          <div class="day-block">
-            <div class="day-label">
-              <span class="day-name">Friday</span>
-              <span class="day-date">June 18</span>
-            </div>
-            <div class="day-dot"></div>
-            <div class="day-event">
-              <h2>WELCOME</h2>
-              <div class="day-box">
-                <p>Sunset drinks and casual dinner to kick off the festivities.</p>
-              </div>
-            </div>
+          <div class="day-card">
+            <h2>WELCOME</h2>
+            <div class="day-date">Friday, June 18</div>
+            <p>Sunset drinks and casual dinner to kick off the festivities.</p>
           </div>
 
-          <div class="day-block">
-            <div class="day-label">
-              <span class="day-name">Saturday</span>
-              <span class="day-date">June 19</span>
-            </div>
-            <div class="day-dot"></div>
-            <div class="day-event">
-              <h2>PARTY</h2>
-              <div class="day-box">
-                <p>Our non-traditional celebration! A Greek feast and dancing late into the night.</p>
-                <p class="day-meta"><a href="https://www.google.com/maps/place/VILLA+MIRA+PAROS/@37.061598,25.118108,15z/data=!4m21!1m10!3m9!1s0x149871b80de12e9f:0xa849e157a65650a4!2sVILLA+MIRA+PAROS!5m2!4m1!1i2!8m2!3d37.0616031!4d25.1268525!16s%2Fg%2F11hdqycq2q!3m9!1s0x149871b80de12e9f:0xa849e157a65650a4!5m2!4m1!1i2!8m2!3d37.0616031!4d25.1268525!15sChFtaXJhIHZpbGxhcyBwYXJvc5IBB2xvZGdpbmc!16s%2Fg%2F11hdqycq2q?entry=ttu&amp;g_ep=EgoyMDI2MDkxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Villa Mira Paros</a></p>
-              </div>
-            </div>
+          <div class="day-card">
+            <h2>PARTY</h2>
+            <div class="day-date">Saturday, June 19</div>
+            <p>Our non-traditional celebration! A Greek feast and dancing late into the night.</p>
+            <p class="day-meta"><a href="https://www.google.com/maps/place/VILLA+MIRA+PAROS/@37.061598,25.118108,15z/data=!4m21!1m10!3m9!1s0x149871b80de12e9f:0xa849e157a65650a4!2sVILLA+MIRA+PAROS!5m2!4m1!1i2!8m2!3d37.0616031!4d25.1268525!16s%2Fg%2F11hdqycq2q!3m9!1s0x149871b80de12e9f:0xa849e157a65650a4!5m2!4m1!1i2!8m2!3d37.0616031!4d25.1268525!15sChFtaXJhIHZpbGxhcyBwYXJvc5IBB2xvZGdpbmc!16s%2Fg%2F11hdqycq2q?entry=ttu&amp;g_ep=EgoyMDI2MDkxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Villa Mira Paros</a></p>
+            <p class="day-address">Paros 844 00</p>
           </div>
 
-          <div class="day-block">
-            <div class="day-label">
-              <span class="day-name">Sunday</span>
-              <span class="day-date">June 20</span>
-            </div>
-            <div class="day-dot"></div>
-            <div class="day-event">
-              <h2>BEACH</h2>
-              <div class="day-box">
-                <p>It's not time to go home yet. Regain your strength with coffee and comfort food by the sea.</p>
-              </div>
-            </div>
+          <div class="day-card">
+            <h2>BEACH</h2>
+            <div class="day-date">Sunday, June 20</div>
+            <p>It's not time to go home yet. Regain your strength with coffee and comfort food by the sea.</p>
           </div>
 
         </div>
