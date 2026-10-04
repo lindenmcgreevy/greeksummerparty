@@ -544,6 +544,7 @@
         <button type="button" data-tab-link="home" aria-current="page">Home</button>
         <button type="button" data-tab-link="schedule">Schedule</button>
         <button type="button" data-tab-link="travel">Travel &amp; Accommodation</button>
+        <button type="button" data-tab-link="guide">Guide</button>
         <button type="button" data-tab-link="rsvp">RSVP</button>
         <button type="button" data-tab-link="faq">FAQ</button>
       </nav>
@@ -608,7 +609,7 @@
           <h2>Accommodation</h2>
           <p class="intro">We have two suggestions for where to stay on the island.</p>
           <p class="intro">The west side is closest to our venues and accommodations tend to be quieter with incredible sunset views. There are many Airbnbs between Pounta and Pasaporos, in addition to the recommended hotels below.</p>
-          <p class="intro">Naousa is 30 minutes north of our venues, but is the place to be if you want to experience classic Cycladic village charm and walkability to shops and restaurants.</p>
+          <p class="intro">Naousa is 30 minutes north of our venues, but it is the place to be if you want to experience a lively Cycladic village with easy walkability to shops and restaurants. If you choose to stay in Naousa, please factor in the extra travel time to the weekend’s venues when planning your stay.</p>
           <div class="hotel-grid">
             <a class="hotel-card" href="https://www.kourosblanc.com/" target="_blank" rel="noopener">
               <div class="hotel-square">
@@ -655,6 +656,11 @@
 
       </section>
 
+      <!-- GUIDE -->
+      <section class="tab-panel" id="guide" data-tab-panel="guide">
+        <p class="lede">We’re putting together a list of our favorite island spots! Come back later for our top beach and restaurant recommendations to round out your stay.</p>
+      </section>
+
       <!-- RSVP -->
       <section class="tab-panel" id="rsvp" data-tab-panel="rsvp">
         <p class="lede">A link to RSVP will be sent out in early 2027.</p>
@@ -670,6 +676,11 @@
           </div>
 
           <div class="faq-item">
+            <h2>How do I get around the island?</h2>
+            <p>As it gets closer, we will share recommended rental car agencies. Cabs and buses are also available if you prefer not to rent a car.</p>
+          </div>
+
+          <div class="faq-item">
             <h2>Will venue transportation be provided?</h2>
             <p>Transportation will be arranged for June 18th and 19th.</p>
           </div>
@@ -677,11 +688,6 @@
           <div class="faq-item">
             <h2>Do you have a registry?</h2>
             <p>Please, no gifts. Just bring yourselves!</p>
-          </div>
-
-          <div class="faq-item">
-            <h2>How do I get around the island?</h2>
-            <p>As it gets closer, we will share recommended rental car agencies. Cabs and buses are also available if you prefer not to rent a car.</p>
           </div>
 
           <div class="faq-item">
@@ -740,7 +746,7 @@
         });
       });
 
-      var validTabs = ['home', 'schedule', 'travel', 'rsvp', 'faq'];
+      var validTabs = ['home', 'schedule', 'travel', 'guide', 'rsvp', 'faq'];
       var initial = window.location.hash.replace('#', '');
       if (validTabs.indexOf(initial) !== -1) {
         showTab(initial, false);
